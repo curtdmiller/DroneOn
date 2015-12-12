@@ -14,33 +14,33 @@
 		F08A9E171C18D12A000890B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E151C18D12A000890B6 /* Main.storyboard */; };
 		F08A9E191C18D12A000890B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E181C18D12A000890B6 /* Assets.xcassets */; };
 		F08A9E1C1C18D12A000890B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E1A1C18D12A000890B6 /* LaunchScreen.storyboard */; };
-		F08A9E381C18D20C000890B6 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A9E331C18D1DA000890B6 /* libpd-ios.a */; };
 		F08A9E3B1C18D20C000890B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A9E391C18D20C000890B6 /* AudioToolbox.framework */; };
 		F08A9E3C1C18D20C000890B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A9E3A1C18D20C000890B6 /* AVFoundation.framework */; };
 		F08A9E421C18D4C9000890B6 /* DroneOn.pd in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E3E1C18D4C9000890B6 /* DroneOn.pd */; };
 		F08A9E431C18D4C9000890B6 /* ola.pd in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E3F1C18D4C9000890B6 /* ola.pd */; };
 		F08A9E471C18D5F4000890B6 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A9E451C18D5F4000890B6 /* PDPatch.m */; };
 		F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F1D1D1C19FC00001D36D3 /* PitchNames.m */; };
+		F0F02F331C1CC819008A682E /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F02F2E1C1CC803008A682E /* libpd-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F08A9E321C18D1DA000890B6 /* PBXContainerItemProxy */ = {
+		F0F02F2D1C1CC803008A682E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F08A9E2D1C18D1DA000890B6 /* libpd.xcodeproj */;
+			containerPortal = F0F02F281C1CC803008A682E /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "libpd-ios";
 		};
-		F08A9E341C18D1DA000890B6 /* PBXContainerItemProxy */ = {
+		F0F02F2F1C1CC803008A682E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F08A9E2D1C18D1DA000890B6 /* libpd.xcodeproj */;
+			containerPortal = F0F02F281C1CC803008A682E /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 119013AB1486450C00086F19;
 			remoteInfo = "libpd-osx";
 		};
-		F08A9E361C18D1F3000890B6 /* PBXContainerItemProxy */ = {
+		F0F02F311C1CC814008A682E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F08A9E2D1C18D1DA000890B6 /* libpd.xcodeproj */;
+			containerPortal = F0F02F281C1CC803008A682E /* libpd.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = "libpd-ios";
@@ -60,7 +60,6 @@
 		F08A9E181C18D12A000890B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F08A9E1B1C18D12A000890B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F08A9E1D1C18D12A000890B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F08A9E2D1C18D1DA000890B6 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		F08A9E391C18D20C000890B6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F08A9E3A1C18D20C000890B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F08A9E3E1C18D4C9000890B6 /* DroneOn.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOn.pd; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		F08A9E461C18D5F4000890B6 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPatch.h; sourceTree = "<group>"; };
 		F09F1D1C1C19FC00001D36D3 /* PitchNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchNames.h; sourceTree = "<group>"; };
 		F09F1D1D1C19FC00001D36D3 /* PitchNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchNames.m; sourceTree = "<group>"; };
+		F0F02F281C1CC803008A682E /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F02F331C1CC819008A682E /* libpd-ios.a in Frameworks */,
 				F08A9E3B1C18D20C000890B6 /* AudioToolbox.framework in Frameworks */,
 				F08A9E3C1C18D20C000890B6 /* AVFoundation.framework in Frameworks */,
-				F08A9E381C18D20C000890B6 /* libpd-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,9 +88,9 @@
 		F08A9DFD1C18D12A000890B6 = {
 			isa = PBXGroup;
 			children = (
+				F0F02F281C1CC803008A682E /* libpd.xcodeproj */,
 				F08A9E391C18D20C000890B6 /* AudioToolbox.framework */,
 				F08A9E3A1C18D20C000890B6 /* AVFoundation.framework */,
-				F08A9E2D1C18D1DA000890B6 /* libpd.xcodeproj */,
 				F08A9E081C18D12A000890B6 /* DroneOn */,
 				F08A9E071C18D12A000890B6 /* Products */,
 			);
@@ -130,15 +130,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F08A9E2E1C18D1DA000890B6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F08A9E331C18D1DA000890B6 /* libpd-ios.a */,
-				F08A9E351C18D1DA000890B6 /* libpd-osx.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F08A9E441C18D4F3000890B6 /* PdResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +152,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		F0F02F291C1CC803008A682E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0F02F2E1C1CC803008A682E /* libpd-ios.a */,
+				F0F02F301C1CC803008A682E /* libpd-osx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,7 +175,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F08A9E371C18D1F3000890B6 /* PBXTargetDependency */,
+				F0F02F321C1CC814008A682E /* PBXTargetDependency */,
 			);
 			name = DroneOn;
 			productName = DroneOn;
@@ -210,8 +210,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F08A9E2E1C18D1DA000890B6 /* Products */;
-					ProjectRef = F08A9E2D1C18D1DA000890B6 /* libpd.xcodeproj */;
+					ProductGroup = F0F02F291C1CC803008A682E /* Products */;
+					ProjectRef = F0F02F281C1CC803008A682E /* libpd.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -222,18 +222,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F08A9E331C18D1DA000890B6 /* libpd-ios.a */ = {
+		F0F02F2E1C1CC803008A682E /* libpd-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-ios.a";
-			remoteRef = F08A9E321C18D1DA000890B6 /* PBXContainerItemProxy */;
+			remoteRef = F0F02F2D1C1CC803008A682E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F08A9E351C18D1DA000890B6 /* libpd-osx.a */ = {
+		F0F02F301C1CC803008A682E /* libpd-osx.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-osx.a";
-			remoteRef = F08A9E341C18D1DA000890B6 /* PBXContainerItemProxy */;
+			remoteRef = F0F02F2F1C1CC803008A682E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -270,10 +270,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F08A9E371C18D1F3000890B6 /* PBXTargetDependency */ = {
+		F0F02F321C1CC814008A682E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "libpd-ios";
-			targetProxy = F08A9E361C18D1F3000890B6 /* PBXContainerItemProxy */;
+			targetProxy = F0F02F311C1CC814008A682E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -388,7 +388,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.curtdmiller.DroneOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "../pd-for-ios/**";
+				USER_HEADER_SEARCH_PATHS = "pd-for-ios/**";
+				WARNING_CFLAGS = "-w";
 			};
 			name = Debug;
 		};
@@ -403,7 +404,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.curtdmiller.DroneOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "../pd-for-ios/**";
+				USER_HEADER_SEARCH_PATHS = "pd-for-ios/**";
+				WARNING_CFLAGS = "-w";
 			};
 			name = Release;
 		};
