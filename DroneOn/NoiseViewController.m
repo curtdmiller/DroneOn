@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  DroneOn
 //
 //  Created by Curt Miller on 12/9/15.
 //  Copyright © 2015 Curt Miller. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "NoiseViewController.h"
 
-@interface FirstViewController ()
+@interface NoiseViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation NoiseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
