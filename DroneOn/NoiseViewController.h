@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDPatch.h"
 
 @interface NoiseViewController : UIViewController
 
+@property (strong, nonatomic) PDPatch *patch;
 
 @end
 

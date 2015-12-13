@@ -11,7 +11,7 @@
 @implementation PDPatch
 
 // MARK: global patch methods
-- (void)setPitch:(int)pitch{
+- (void)setPitch:(int)pitch {
     float p = (int)pitch;
     [PdBase sendFloat:p toReceiver:@"pitch"];
 }
@@ -25,7 +25,7 @@
 }
 
 // MARK: sine specific methods
-- (void)sineToggle:(BOOL)switchState{
+- (void)sineToggle:(BOOL)switchState {
     float yn = (BOOL)switchState;
     [PdBase sendFloat:yn toReceiver:@"oscToggle"];
 }
@@ -33,6 +33,26 @@
     float sv = (float)volume;
     [PdBase sendFloat:sv toReceiver:@"oscVol"];
 }
+
+
+// MARK: noise specific methods
+- (void)noiseToggle:(BOOL)yesNo {
+    float yn = (BOOL)yesNo;
+    [PdBase sendFloat:yn toReceiver:@"noiseToggle"];
+}
+- (void)setNoiseVolume:(float)volume {
+    float v = (float)volume;
+    [PdBase sendFloat:v toReceiver:@"noiseVol"];
+}
+- (void)setNoiseHighPass:(float)freq {
+    float f = (float)freq;
+    [PdBase sendFloat:f toReceiver:@"noiseHipFreq"];
+}
+- (void)setNoiseLowPass:(float)freq {
+    float f = (float)freq;
+    [PdBase sendFloat:freq toReceiver:@"noiseLopFreq"];
+}
+
 
 - (instancetype)initWithFile:(NSString *)pdFile{
     void *patch;
@@ -46,7 +66,7 @@
             NSLog(@"%@ loaded.", pdFile);
         }
     }
-
+    
     return self;
 }
 
