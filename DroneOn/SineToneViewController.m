@@ -23,8 +23,6 @@
 
 @implementation SineToneViewController
 
-int tuning;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -37,7 +35,6 @@ int tuning;
     [self.patch setPitch:36];
     [self.patch setOctaveOffset:0];
     
-//    NSLog(@"%lu",(unsigned long)((NSArray *)_pitchNames.pitches[0]).count);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,10 +82,13 @@ int tuning;
     [self.patch setTuning:self.sineTuningSlider.value];
     NSString *currentTuning = [NSString stringWithFormat:@"A = %.1f Hz", self.sineTuningSlider.value];
     self.sineTuningLabel.text = currentTuning;
-    tuning = self.sineTuningSlider.value;
+    self.sineTuningStepper.value = self.sineTuningSlider.value;
 }
 - (IBAction)sineTuningStepperInput:(id)sender {
-
+    [self.patch setTuning:self.sineTuningSlider.value];
+    NSString *currentTuning = [NSString stringWithFormat:@"A = %.1f Hz", self.sineTuningSlider.value];
+    self.sineTuningLabel.text = currentTuning;
+    self.sineTuningSlider.value = self.sineTuningStepper.value;
 }
 
 
