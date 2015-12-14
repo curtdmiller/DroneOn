@@ -23,5 +23,10 @@
 - (void)sineToggle:(BOOL)yesNo;
 - (void)sineVolume:(float)volume;
 
+// noise specific methods
+- (void)noiseToggle:(BOOL)yesNo;
+- (void)setNoiseVolume:(float)volume;
+- (void)setNoiseHighPass:(float)freq;
+- (void)setNoiseLowPass:(float)freq;
 
 @end

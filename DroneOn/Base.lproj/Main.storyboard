@@ -21,6 +21,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6gj-aY-TlC">
                                 <rect key="frame" x="276" y="512" width="51" height="31"/>
                                 <animations/>
+                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sineToggleSwitch:" destination="9pv-A4-QxB" eventType="valueChanged" id="LbX-SF-tyZ"/>
                                 </connections>
@@ -49,7 +50,7 @@
                                 <rect key="frame" x="276" y="448" width="48" height="18"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="420" maximumValue="460" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="pkG-hG-GzV">
@@ -63,21 +64,30 @@
                                 <rect key="frame" x="257" y="74" width="86" height="18"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-Tm-Jxv">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
                                 <animations/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-ce-MZv">
+                                <rect key="frame" x="273" y="20" width="54" height="28"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="06n-b6-Y60" firstAttribute="top" secondItem="qQA-r8-vnd" secondAttribute="bottom" constant="8" id="3E9-rb-q4k"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6gj-aY-TlC" secondAttribute="bottom" constant="8" id="3YB-oe-HIt"/>
                             <constraint firstItem="6gj-aY-TlC" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="79R-Az-r41"/>
+                            <constraint firstItem="WQ5-ce-MZv" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="9xU-Q7-laQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XzO-Tm-Jxv" secondAttribute="trailing" constant="-20" id="Aa6-rp-vJt"/>
+                            <constraint firstItem="WQ5-ce-MZv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="D8a-Jk-7Bf"/>
                             <constraint firstItem="PT6-99-Scb" firstAttribute="top" secondItem="pkG-hG-GzV" secondAttribute="bottom" constant="8" id="DPY-94-0mc"/>
                             <constraint firstItem="pkG-hG-GzV" firstAttribute="top" secondItem="oPf-ky-u7g" secondAttribute="bottom" constant="8" id="FV6-8W-ebQ"/>
                             <constraint firstItem="PT6-99-Scb" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Fn3-f6-yx8"/>
@@ -120,16 +130,99 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Vq-8A-yU9">
                                 <rect key="frame" x="276" y="512" width="51" height="31"/>
                                 <animations/>
+                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="noiseSwitchStateChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="YDP-lb-Pj3"/>
+                                </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOISE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNX-VX-WDj">
+                                <rect key="frame" x="264" y="20" width="72" height="28"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GvG-4Q-Frm">
+                                <rect key="frame" x="200" y="474" width="200" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="LMu-Zj-VV5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="lowPassChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="i95-mt-Lcc"/>
+                                    <action selector="noiseVolumeSliderChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="9re-hb-pfj"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtw-Hp-gw5">
+                                <rect key="frame" x="276" y="448" width="48" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="136" translatesAutoresizingMaskIntoConstraints="NO" id="Bmp-04-kWN">
+                                <rect key="frame" x="200" y="257" width="200" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="uf8-3P-LD1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="highPassChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ntA-yU-0Xn"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="136" minValue="5" maxValue="136" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-ca-ca2">
+                                <rect key="frame" x="200" y="338" width="200" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="MKA-XR-Jrb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="lowPassChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="4SE-2O-vfb"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High-Pass Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exw-nR-xkY">
+                                <rect key="frame" x="249" y="231" width="102" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low-Pass Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v7-Rr-gFw">
+                                <rect key="frame" x="250" y="312" width="100" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Bmp-04-kWN" secondAttribute="bottom" constant="264" id="3bq-aV-9HH"/>
+                            <constraint firstItem="Bmp-04-kWN" firstAttribute="top" secondItem="exw-nR-xkY" secondAttribute="bottom" constant="8" id="6bZ-CJ-l8d"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="HQw-ca-ca2" secondAttribute="bottom" constant="183" id="NXL-fN-aqf"/>
+                            <constraint firstItem="GvG-4Q-Frm" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="T2U-t6-ZmR"/>
+                            <constraint firstItem="Bmp-04-kWN" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="VLt-7T-DL1"/>
+                            <constraint firstItem="HQw-ca-ca2" firstAttribute="top" secondItem="2v7-Rr-gFw" secondAttribute="bottom" constant="8" id="aIc-CF-vQy"/>
+                            <constraint firstItem="wtw-Hp-gw5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="cIQ-KE-0mL"/>
+                            <constraint firstItem="GvG-4Q-Frm" firstAttribute="top" secondItem="wtw-Hp-gw5" secondAttribute="bottom" constant="8" id="cuX-eY-Sgn"/>
+                            <constraint firstItem="exw-nR-xkY" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="fy5-LO-98I"/>
+                            <constraint firstItem="HQw-ca-ca2" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="i4c-C0-0nt"/>
+                            <constraint firstItem="qNX-VX-WDj" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="nk3-Cy-kiE"/>
                             <constraint firstItem="0Vq-8A-yU9" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="vvF-qj-3BT"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="0Vq-8A-yU9" secondAttribute="bottom" constant="8" id="w7T-Qn-bn3"/>
+                            <constraint firstItem="2v7-Rr-gFw" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="w9a-P5-6yS"/>
+                            <constraint firstItem="0Vq-8A-yU9" firstAttribute="top" secondItem="GvG-4Q-Frm" secondAttribute="bottom" constant="8" id="xd7-JA-v14"/>
+                            <constraint firstItem="qNX-VX-WDj" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="xpy-o7-og7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Noise" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="noiseHighPassSlider" destination="Bmp-04-kWN" id="Ng3-Er-hb5"/>
+                        <outlet property="noiseLowPassSlider" destination="HQw-ca-ca2" id="uAN-el-xKw"/>
+                        <outlet property="noiseSwitch" destination="0Vq-8A-yU9" id="p68-hT-Nbb"/>
+                        <outlet property="noiseVolumeSlider" destination="GvG-4Q-Frm" id="vbm-nH-oLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
