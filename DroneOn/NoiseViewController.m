@@ -31,11 +31,11 @@
 }
 
 - (IBAction)highPassChange:(id)sender {
-    [self.patch setNoiseHighPass:((float)self.noiseHighPassSlider.value)];
+    [self.patch setNoiseHighPass:(self.noiseHighPassSlider.value)];
     NSLog(@"%f",self.noiseHighPassSlider.value);
 }
 - (IBAction)lowPassChange:(id)sender {
-    [self.patch setNoiseLowPass:((float)self.noiseLowPassSlider.value)];
+    [self.patch setNoiseLowPass:(self.noiseLowPassSlider.value)];
 }
 - (IBAction)noiseSwitchStateChange:(id)sender {
     [self.patch noiseToggle:(self.noiseSwitch.isOn)];
