@@ -19,6 +19,7 @@
 		F08A9E421C18D4C9000890B6 /* DroneOn.pd in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E3E1C18D4C9000890B6 /* DroneOn.pd */; };
 		F08A9E431C18D4C9000890B6 /* ola.pd in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E3F1C18D4C9000890B6 /* ola.pd */; };
 		F08A9E471C18D5F4000890B6 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A9E451C18D5F4000890B6 /* PDPatch.m */; };
+		F08B1E611C1E53800043E182 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08B1E601C1E53800043E182 /* FMViewController.m */; };
 		F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F1D1D1C19FC00001D36D3 /* PitchNames.m */; };
 		F0F02F331C1CC819008A682E /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F02F2E1C1CC803008A682E /* libpd-ios.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,8 @@
 		F08A9E3F1C18D4C9000890B6 /* ola.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ola.pd; sourceTree = "<group>"; };
 		F08A9E451C18D5F4000890B6 /* PDPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDPatch.m; sourceTree = "<group>"; };
 		F08A9E461C18D5F4000890B6 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPatch.h; sourceTree = "<group>"; };
+		F08B1E5F1C1E53800043E182 /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
+		F08B1E601C1E53800043E182 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		F09F1D1C1C19FC00001D36D3 /* PitchNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchNames.h; sourceTree = "<group>"; };
 		F09F1D1D1C19FC00001D36D3 /* PitchNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchNames.m; sourceTree = "<group>"; };
 		F0F02F281C1CC803008A682E /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				F08A9E101C18D12A000890B6 /* SineToneViewController.m */,
 				F08A9E121C18D12A000890B6 /* NoiseViewController.h */,
 				F08A9E131C18D12A000890B6 /* NoiseViewController.m */,
+				F08B1E5F1C1E53800043E182 /* FMViewController.h */,
+				F08B1E601C1E53800043E182 /* FMViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			files = (
 				F08A9E471C18D5F4000890B6 /* PDPatch.m in Sources */,
 				F08A9E141C18D12A000890B6 /* NoiseViewController.m in Sources */,
+				F08B1E611C1E53800043E182 /* FMViewController.m in Sources */,
 				F08A9E0E1C18D12A000890B6 /* AppDelegate.m in Sources */,
 				F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */,
 				F08A9E111C18D12A000890B6 /* SineToneViewController.m in Sources */,
