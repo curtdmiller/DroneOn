@@ -10,7 +10,7 @@
 
 @implementation PDPatch
 
-// MARK: global patch methods
+#pragma mark - global patch methods
 - (void)setPitch:(int)pitch {
     float p = (int)pitch;
     [PdBase sendFloat:p toReceiver:@"pitch"];
@@ -24,7 +24,7 @@
     [PdBase sendFloat:o toReceiver:@"octaveOffset"];
 }
 
-// MARK: sine specific methods
+#pragma mark - sine specific methods
 - (void)sineToggle:(BOOL)switchState {
     float yn = (BOOL)switchState;
     [PdBase sendFloat:yn toReceiver:@"oscToggle"];
@@ -35,7 +35,7 @@
 }
 
 
-// MARK: noise specific methods
+#pragma mark - noise specific methods
 - (void)noiseToggle:(BOOL)yesNo {
     float yn = (BOOL)yesNo;
     [PdBase sendFloat:yn toReceiver:@"noiseToggle"];
@@ -52,6 +52,22 @@
     float f = (float)freq;
     [PdBase sendFloat:freq toReceiver:@"noiseLopFreq"];
 }
+
+#pragma mark - FM specific methods
+- (void)fmToggle:(BOOL)yesNo{
+    float yn = (BOOL)yesNo;
+    [PdBase sendFloat:yn toReceiver:@"PMToggle"];
+}
+- (void)setFMVolume:(float)volume{
+    float v = (float)volume;
+    [PdBase sendFloat:v toReceiver:@"PMVol"];
+}
+- (void)setFMIndex:(float)brightness{
+    float i = (float)brightness;
+    [PdBase sendFloat:i toReceiver:@"index"];
+}
+
+
 
 
 - (instancetype)initWithFile:(NSString *)pdFile{

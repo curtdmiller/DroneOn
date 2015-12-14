@@ -53,7 +53,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="420" maximumValue="460" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="pkG-hG-GzV">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="420" maximumValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="pkG-hG-GzV">
                                 <rect key="frame" x="253" y="100" width="94" height="29"/>
                                 <animations/>
                                 <connections>
@@ -67,7 +67,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-Tm-Jxv">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-Tm-Jxv">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
                                 <animations/>
                             </pickerView>
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-302"/>
+            <point key="canvasLocation" x="750" y="-327"/>
         </scene>
         <!--Noise-->
         <scene sceneID="wg7-f3-ORb">
@@ -247,15 +247,119 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-0Q-AIB">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <animations/>
+                            </pickerView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8tc-qK-MzO">
+                                <rect key="frame" x="276" y="512" width="51" height="31"/>
+                                <animations/>
+                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="fmToggleChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="iSJ-K9-6dJ"/>
+                                    <action selector="noiseSwitchStateChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ct4-8p-YeA"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-II-bO2">
+                                <rect key="frame" x="200" y="474" width="200" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="Gos-97-GSB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="fmVolumeSliderChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="SKF-z5-grg"/>
+                                    <action selector="lowPassChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Yx4-14-WjG"/>
+                                    <action selector="noiseVolumeSliderChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="I04-Lb-ciN"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7r-Ui-ukc">
+                                <rect key="frame" x="276" y="448" width="48" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xfK-dE-pXf">
+                                <rect key="frame" x="18" y="134" width="100" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="ngz-BI-mGf"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="brightnessSliderChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="Qwo-ws-FGv"/>
+                                    <action selector="sineTuningSliderInput:" destination="9pv-A4-QxB" eventType="valueChanged" id="c0c-rN-og4"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-zZ-9fx">
+                                <rect key="frame" x="34" y="71" width="69" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minValue="420" maxValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="oSs-rm-dmq">
+                                <rect key="frame" x="482" y="134" width="100" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="oGa-ZW-pwL"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="fmTuningSliderChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="3fr-0w-Sr5"/>
+                                    <action selector="sineTuningSliderInput:" destination="9pv-A4-QxB" eventType="valueChanged" id="7fD-a3-W63"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="420" maximumValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="Or7-KM-XjX">
+                                <rect key="frame" x="485" y="97" width="94" height="29"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="fmTuningStepperChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="adQ-eP-SWM"/>
+                                    <action selector="sineTuningStepperInput:" destination="9pv-A4-QxB" eventType="valueChanged" id="QeJ-ec-TBb"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A = 440.0 Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bht-ar-uab">
+                                <rect key="frame" x="489" y="71" width="86" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="A7r-Ui-ukc" firstAttribute="centerX" secondItem="YJY-hv-Fpy" secondAttribute="centerX" id="36T-b1-xVq"/>
                             <constraint firstItem="ZaC-cy-o6o" firstAttribute="top" secondItem="mAl-iH-dXC" secondAttribute="bottom" id="61a-gh-aex"/>
+                            <constraint firstItem="8tc-qK-MzO" firstAttribute="centerX" secondItem="YJY-hv-Fpy" secondAttribute="centerX" id="78v-DN-TLv"/>
+                            <constraint firstItem="xfK-dE-pXf" firstAttribute="bottom" secondItem="oSs-rm-dmq" secondAttribute="bottom" id="ETl-Qj-CD9"/>
+                            <constraint firstItem="x7H-dc-5X7" firstAttribute="top" secondItem="8tc-qK-MzO" secondAttribute="bottom" constant="8" id="F3T-ez-fts"/>
+                            <constraint firstItem="Bht-ar-uab" firstAttribute="centerX" secondItem="oSs-rm-dmq" secondAttribute="centerX" id="Hrm-Rm-Nsr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oSs-rm-dmq" secondAttribute="trailing" id="Jyt-1d-UO8"/>
+                            <constraint firstItem="p6Q-0Q-AIB" firstAttribute="centerY" secondItem="YJY-hv-Fpy" secondAttribute="centerY" id="P0I-Mt-7uR"/>
                             <constraint firstItem="ZaC-cy-o6o" firstAttribute="centerX" secondItem="YJY-hv-Fpy" secondAttribute="centerX" id="QLT-JA-SZf"/>
+                            <constraint firstItem="Gub-II-bO2" firstAttribute="top" secondItem="A7r-Ui-ukc" secondAttribute="bottom" constant="8" id="XHj-Ca-MSv"/>
+                            <constraint firstItem="4zA-zZ-9fx" firstAttribute="centerX" secondItem="xfK-dE-pXf" secondAttribute="centerX" id="Z7w-3r-D1j"/>
+                            <constraint firstItem="oSs-rm-dmq" firstAttribute="top" secondItem="mAl-iH-dXC" secondAttribute="bottom" constant="114" id="ZqB-Bz-tR6"/>
+                            <constraint firstItem="Or7-KM-XjX" firstAttribute="centerX" secondItem="oSs-rm-dmq" secondAttribute="centerX" id="ag9-An-PfT"/>
+                            <constraint firstItem="p6Q-0Q-AIB" firstAttribute="leading" secondItem="YJY-hv-Fpy" secondAttribute="leading" id="gJw-7f-Tat"/>
+                            <constraint firstItem="8tc-qK-MzO" firstAttribute="top" secondItem="Gub-II-bO2" secondAttribute="bottom" constant="8" id="j4Y-xN-eWG"/>
+                            <constraint firstItem="oSs-rm-dmq" firstAttribute="top" secondItem="Or7-KM-XjX" secondAttribute="bottom" constant="8" id="k3F-0u-cod"/>
+                            <constraint firstItem="Gub-II-bO2" firstAttribute="centerX" secondItem="YJY-hv-Fpy" secondAttribute="centerX" id="lOb-AR-hHC"/>
+                            <constraint firstItem="p6Q-0Q-AIB" firstAttribute="centerX" secondItem="ZaC-cy-o6o" secondAttribute="centerX" id="nha-fD-gME"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xfK-dE-pXf" secondAttribute="leading" id="pfo-Rh-9g3"/>
+                            <constraint firstItem="Or7-KM-XjX" firstAttribute="top" secondItem="Bht-ar-uab" secondAttribute="bottom" constant="8" id="qP9-wx-iRD"/>
+                            <constraint firstItem="4zA-zZ-9fx" firstAttribute="top" secondItem="Bht-ar-uab" secondAttribute="top" id="rmt-Hb-cNA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="jNj-5d-6sO"/>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="xfK-dE-pXf" id="SEC-zm-Ts8"/>
+                        <outlet property="fmNotePicker" destination="p6Q-0Q-AIB" id="8t1-NB-hi8"/>
+                        <outlet property="fmToggle" destination="8tc-qK-MzO" id="4sr-lm-9UF"/>
+                        <outlet property="fmTuningLabel" destination="Bht-ar-uab" id="dQh-bS-cfQ"/>
+                        <outlet property="fmTuningSlider" destination="oSs-rm-dmq" id="630-OF-10f"/>
+                        <outlet property="fmTuningStepper" destination="Or7-KM-XjX" id="Hrh-9q-F2o"/>
+                        <outlet property="fmVolumeSlider" destination="Gub-II-bO2" id="EHP-tZ-C6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQs-wQ-AYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

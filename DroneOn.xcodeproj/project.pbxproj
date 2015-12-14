@@ -110,12 +110,10 @@
 		F08A9E081C18D12A000890B6 /* DroneOn */ = {
 			isa = PBXGroup;
 			children = (
+				F08B1E6B1C1F48140043E182 /* Models */,
 				F0B7DF0B1C1A549900E892D7 /* ViewControllers */,
-				F08A9E441C18D4F3000890B6 /* PdResources */,
 				F08A9E0C1C18D12A000890B6 /* AppDelegate.h */,
 				F08A9E0D1C18D12A000890B6 /* AppDelegate.m */,
-				F09F1D1C1C19FC00001D36D3 /* PitchNames.h */,
-				F09F1D1D1C19FC00001D36D3 /* PitchNames.m */,
 				F08A9E151C18D12A000890B6 /* Main.storyboard */,
 				F08A9E181C18D12A000890B6 /* Assets.xcassets */,
 				F08A9E1A1C18D12A000890B6 /* LaunchScreen.storyboard */,
@@ -142,6 +140,16 @@
 				F08A9E3F1C18D4C9000890B6 /* ola.pd */,
 			);
 			name = PdResources;
+			sourceTree = "<group>";
+		};
+		F08B1E6B1C1F48140043E182 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F09F1D1C1C19FC00001D36D3 /* PitchNames.h */,
+				F09F1D1D1C19FC00001D36D3 /* PitchNames.m */,
+				F08A9E441C18D4F3000890B6 /* PdResources */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		F0B7DF0B1C1A549900E892D7 /* ViewControllers */ = {

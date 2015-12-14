@@ -29,4 +29,9 @@
 - (void)setNoiseHighPass:(float)freq;
 - (void)setNoiseLowPass:(float)freq;
 
+// fm specific methods
+- (void)fmToggle:(BOOL)yesNo;
+- (void)setFMVolume:(float)volume;
+- (void)setFMIndex:(float)brightness;
+
 @end

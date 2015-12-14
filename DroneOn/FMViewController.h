@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDPatch.h"
 
-@interface FMViewController : UIViewController
+@class PitchNames;
+
+@interface FMViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+
+@property (strong, nonatomic) PDPatch *patch;
+@property (strong, nonatomic) PitchNames *pitchNames;
+
+@property (weak, nonatomic) IBOutlet UIPickerView *fmNotePicker;
 
 @end

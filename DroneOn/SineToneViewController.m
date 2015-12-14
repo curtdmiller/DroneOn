@@ -31,9 +31,12 @@
 
     self.sineNotePicker.dataSource = self;
     self.sineNotePicker.delegate = self;
+    [self.sineNotePicker selectRow:2 inComponent:1 animated:NO];
+    [self.sineNotePicker selectRow:0 inComponent:0 animated:NO];
+    
     
     [self.patch setPitch:36];
-    [self.patch setOctaveOffset:0];
+    [self.patch setOctaveOffset:2];
     
 }
 
@@ -42,7 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-// MARK: Picker
+#pragma mark - Picker
 
 // returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -77,7 +80,7 @@
     }
 }
 
-// MARK: Interface actions methods
+#pragma mark - Interface actions methods
 
 - (IBAction)sineToggleSwitch:(id)sender {
     [self.patch sineToggle:(self.sineToggleSwitch.isOn)];
