@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.patch = [[PDPatch alloc]initWithFile:@"DroneOn.pd"];
+    self.patch = [[PDPatch alloc]initWithFile:@"DroneOnNoise.pd"];
 }
 
 - (void)didReceiveMemoryWarning {
