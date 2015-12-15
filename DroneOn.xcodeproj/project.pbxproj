@@ -24,6 +24,7 @@
 		F0CA05781C2081C10072BECA /* DroneOnSine.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA05771C2081C10072BECA /* DroneOnSine.pd */; };
 		F0CA057B1C2087040072BECA /* DroneOnNoise.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA057A1C2087040072BECA /* DroneOnNoise.pd */; };
 		F0CA057D1C2088490072BECA /* DroneOnFM.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA057C1C2088490072BECA /* DroneOnFM.pd */; };
+		F0CA057F1C208B530072BECA /* DroneOnRecord.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA057E1C208B530072BECA /* DroneOnRecord.pd */; };
 		F0F02F331C1CC819008A682E /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F02F2E1C1CC803008A682E /* libpd-ios.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		F0CA05771C2081C10072BECA /* DroneOnSine.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnSine.pd; sourceTree = "<group>"; };
 		F0CA057A1C2087040072BECA /* DroneOnNoise.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnNoise.pd; sourceTree = "<group>"; };
 		F0CA057C1C2088490072BECA /* DroneOnFM.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnFM.pd; sourceTree = "<group>"; };
+		F0CA057E1C208B530072BECA /* DroneOnRecord.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnRecord.pd; sourceTree = "<group>"; };
 		F0F02F281C1CC803008A682E /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				F0CA05771C2081C10072BECA /* DroneOnSine.pd */,
 				F0CA057A1C2087040072BECA /* DroneOnNoise.pd */,
 				F0CA057C1C2088490072BECA /* DroneOnFM.pd */,
+				F0CA057E1C208B530072BECA /* DroneOnRecord.pd */,
 				F08A9E3F1C18D4C9000890B6 /* ola.pd */,
 			);
 			name = PdResources;
@@ -272,6 +275,7 @@
 				F08A9E421C18D4C9000890B6 /* DroneOn.pd in Resources */,
 				F08A9E191C18D12A000890B6 /* Assets.xcassets in Resources */,
 				F0CA057D1C2088490072BECA /* DroneOnFM.pd in Resources */,
+				F0CA057F1C208B530072BECA /* DroneOnRecord.pd in Resources */,
 				F08A9E171C18D12A000890B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
