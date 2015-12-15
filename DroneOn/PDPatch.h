@@ -13,13 +13,14 @@
 
 - (instancetype)initWithFile:(NSString *)pdFile;
 
-
-// global patch methods
 - (void)setPitch:(int)pitch;
 - (void)setTuning:(float)tuning;
 - (void)setOctaveOffset:(float)octave;
 
 // sine specific methods
+- (void)setSinePitch:(int)pitch;
+- (void)setSineOctaveOffset:(float)octave;
+- (void)setSineTuning:(float)tuning;
 - (void)sineToggle:(BOOL)yesNo;
 - (void)sineVolume:(float)volume;
 

@@ -25,6 +25,18 @@
 }
 
 #pragma mark - sine specific methods
+- (void)setSinePitch:(int)pitch {
+    float p = (int)pitch;
+    [PdBase sendFloat:p toReceiver:@"sinePitch"];
+}
+- (void)setSineOctaveOffset:(float)octave{
+    float o = (float)octave;
+    [PdBase sendFloat:o toReceiver:@"sineOctaveOffset"];
+}
+- (void)setSineTuning:(float)tuning{
+    float t = (float)tuning;
+    [PdBase sendFloat:t toReceiver:@"sineTuning"];
+}
 - (void)sineToggle:(BOOL)switchState {
     float yn = (BOOL)switchState;
     [PdBase sendFloat:yn toReceiver:@"oscToggle"];

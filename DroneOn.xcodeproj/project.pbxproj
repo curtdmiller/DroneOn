@@ -21,6 +21,7 @@
 		F08A9E471C18D5F4000890B6 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A9E451C18D5F4000890B6 /* PDPatch.m */; };
 		F08B1E611C1E53800043E182 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08B1E601C1E53800043E182 /* FMViewController.m */; };
 		F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F1D1D1C19FC00001D36D3 /* PitchNames.m */; };
+		F0CA05781C2081C10072BECA /* DroneOnSine.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA05771C2081C10072BECA /* DroneOnSine.pd */; };
 		F0F02F331C1CC819008A682E /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F02F2E1C1CC803008A682E /* libpd-ios.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		F08B1E601C1E53800043E182 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		F09F1D1C1C19FC00001D36D3 /* PitchNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchNames.h; sourceTree = "<group>"; };
 		F09F1D1D1C19FC00001D36D3 /* PitchNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchNames.m; sourceTree = "<group>"; };
+		F0CA05771C2081C10072BECA /* DroneOnSine.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnSine.pd; sourceTree = "<group>"; };
 		F0F02F281C1CC803008A682E /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 				F08A9E461C18D5F4000890B6 /* PDPatch.h */,
 				F08A9E451C18D5F4000890B6 /* PDPatch.m */,
 				F08A9E3E1C18D4C9000890B6 /* DroneOn.pd */,
+				F0CA05771C2081C10072BECA /* DroneOnSine.pd */,
 				F08A9E3F1C18D4C9000890B6 /* ola.pd */,
 			);
 			name = PdResources;
@@ -258,6 +261,7 @@
 			files = (
 				F08A9E431C18D4C9000890B6 /* ola.pd in Resources */,
 				F08A9E1C1C18D12A000890B6 /* LaunchScreen.storyboard in Resources */,
+				F0CA05781C2081C10072BECA /* DroneOnSine.pd in Resources */,
 				F08A9E421C18D4C9000890B6 /* DroneOn.pd in Resources */,
 				F08A9E191C18D12A000890B6 /* Assets.xcassets in Resources */,
 				F08A9E171C18D12A000890B6 /* Main.storyboard in Resources */,

@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.patch = [[PDPatch alloc]initWithFile:@"DroneOn.pd"];
+    self.patch = [[PDPatch alloc]initWithFile:@"DroneOnSine.pd"];
     self.pitchNames = [[PitchNames alloc] init];
 
     self.sineNotePicker.dataSource = self;
@@ -71,11 +71,11 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) { // if selection made from letter names column
         int currentPitch = [self.pitchNames pitchNameToMidi:[self.pitchNames.pitches[component] objectAtIndex:row]];
-        [self.patch setPitch:currentPitch];
+        [self.patch setSinePitch:currentPitch];
         NSLog(@"current pitch: %d", currentPitch);
     } else { // if selection made from octave column
         int currentOctave = [self.pitchNames octaveNameToInt:[self.pitchNames.pitches[component] objectAtIndex:row]];
-        [self.patch setOctaveOffset:currentOctave];
+        [self.patch setSineOctaveOffset:currentOctave];
         NSLog(@"current octave %d", currentOctave);
     }
 }
@@ -89,13 +89,13 @@
     [self.patch sineVolume:(self.sineVolumeSlider.value)];
 }
 - (IBAction)sineTuningSliderInput:(id)sender {
-    [self.patch setTuning:self.sineTuningSlider.value];
+    [self.patch setSineTuning:self.sineTuningSlider.value];
     NSString *currentTuning = [NSString stringWithFormat:@"A = %.1f Hz", self.sineTuningSlider.value];
     self.sineTuningLabel.text = currentTuning;
     self.sineTuningStepper.value = self.sineTuningSlider.value;
 }
 - (IBAction)sineTuningStepperInput:(id)sender {
-    [self.patch setTuning:self.sineTuningSlider.value];
+    [self.patch setSineTuning:self.sineTuningSlider.value];
     NSString *currentTuning = [NSString stringWithFormat:@"A = %.1f Hz", self.sineTuningSlider.value];
     self.sineTuningLabel.text = currentTuning;
     self.sineTuningSlider.value = self.sineTuningStepper.value;
