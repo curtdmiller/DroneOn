@@ -99,11 +99,11 @@
 		F08A9DFD1C18D12A000890B6 = {
 			isa = PBXGroup;
 			children = (
-				F0F02F281C1CC803008A682E /* libpd.xcodeproj */,
-				F08A9E391C18D20C000890B6 /* AudioToolbox.framework */,
-				F08A9E3A1C18D20C000890B6 /* AVFoundation.framework */,
 				F08A9E081C18D12A000890B6 /* DroneOn */,
 				F08A9E071C18D12A000890B6 /* Products */,
+				F08A9E3A1C18D20C000890B6 /* AVFoundation.framework */,
+				F08A9E391C18D20C000890B6 /* AudioToolbox.framework */,
+				F0F02F281C1CC803008A682E /* libpd.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,14 +119,14 @@
 			isa = PBXGroup;
 			children = (
 				F08B1E6B1C1F48140043E182 /* Models */,
+				F08A9E091C18D12A000890B6 /* Supporting Files */,
 				F0B7DF0B1C1A549900E892D7 /* ViewControllers */,
 				F08A9E0C1C18D12A000890B6 /* AppDelegate.h */,
 				F08A9E0D1C18D12A000890B6 /* AppDelegate.m */,
-				F08A9E151C18D12A000890B6 /* Main.storyboard */,
 				F08A9E181C18D12A000890B6 /* Assets.xcassets */,
-				F08A9E1A1C18D12A000890B6 /* LaunchScreen.storyboard */,
 				F08A9E1D1C18D12A000890B6 /* Info.plist */,
-				F08A9E091C18D12A000890B6 /* Supporting Files */,
+				F08A9E1A1C18D12A000890B6 /* LaunchScreen.storyboard */,
+				F08A9E151C18D12A000890B6 /* Main.storyboard */,
 			);
 			path = DroneOn;
 			sourceTree = "<group>";
@@ -136,45 +136,45 @@
 			children = (
 				F08A9E0A1C18D12A000890B6 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F08A9E441C18D4F3000890B6 /* PdResources */ = {
 			isa = PBXGroup;
 			children = (
+				F08A9E3E1C18D4C9000890B6 /* DroneOn.pd */,
+				F0CA057C1C2088490072BECA /* DroneOnFM.pd */,
+				F0CA057A1C2087040072BECA /* DroneOnNoise.pd */,
+				F0CA057E1C208B530072BECA /* DroneOnRecord.pd */,
+				F0CA05771C2081C10072BECA /* DroneOnSine.pd */,
 				F08A9E461C18D5F4000890B6 /* PDPatch.h */,
 				F08A9E451C18D5F4000890B6 /* PDPatch.m */,
-				F08A9E3E1C18D4C9000890B6 /* DroneOn.pd */,
-				F0CA05771C2081C10072BECA /* DroneOnSine.pd */,
-				F0CA057A1C2087040072BECA /* DroneOnNoise.pd */,
-				F0CA057C1C2088490072BECA /* DroneOnFM.pd */,
-				F0CA057E1C208B530072BECA /* DroneOnRecord.pd */,
 				F08A9E3F1C18D4C9000890B6 /* ola.pd */,
 			);
-			name = PdResources;
+			path = PdResources;
 			sourceTree = "<group>";
 		};
 		F08B1E6B1C1F48140043E182 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F08A9E441C18D4F3000890B6 /* PdResources */,
 				F09F1D1C1C19FC00001D36D3 /* PitchNames.h */,
 				F09F1D1D1C19FC00001D36D3 /* PitchNames.m */,
-				F08A9E441C18D4F3000890B6 /* PdResources */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F0B7DF0B1C1A549900E892D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F08A9E0F1C18D12A000890B6 /* SineToneViewController.h */,
-				F08A9E101C18D12A000890B6 /* SineToneViewController.m */,
-				F08A9E121C18D12A000890B6 /* NoiseViewController.h */,
-				F08A9E131C18D12A000890B6 /* NoiseViewController.m */,
 				F08B1E5F1C1E53800043E182 /* FMViewController.h */,
 				F08B1E601C1E53800043E182 /* FMViewController.m */,
+				F08A9E121C18D12A000890B6 /* NoiseViewController.h */,
+				F08A9E131C18D12A000890B6 /* NoiseViewController.m */,
+				F08A9E0F1C18D12A000890B6 /* SineToneViewController.h */,
+				F08A9E101C18D12A000890B6 /* SineToneViewController.m */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F0F02F291C1CC803008A682E /* Products */ = {
@@ -314,6 +314,7 @@
 				F08A9E161C18D12A000890B6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		F08A9E1A1C18D12A000890B6 /* LaunchScreen.storyboard */ = {
@@ -322,6 +323,7 @@
 				F08A9E1B1C18D12A000890B6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
