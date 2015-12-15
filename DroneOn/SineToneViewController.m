@@ -34,10 +34,6 @@
     [self.sineNotePicker selectRow:2 inComponent:1 animated:NO];
     [self.sineNotePicker selectRow:0 inComponent:0 animated:NO];
     
-    
-    [self.patch setPitch:36];
-    [self.patch setOctaveOffset:2];
-    
 }
 
 - (void)didReceiveMemoryWarning {

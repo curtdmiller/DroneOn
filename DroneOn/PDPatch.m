@@ -78,9 +78,19 @@
     float i = (float)brightness;
     [PdBase sendFloat:i toReceiver:@"index"];
 }
+- (void)setFMPitch:(int)pitch{
+    float p = (int)pitch;
+    [PdBase sendFloat:p toReceiver:@"FMPitch"];
+}
+- (void)setFMTuning:(float)tuning{
+    float t = (float)tuning;
+    [PdBase sendFloat:t toReceiver:@"FMTuning"];
 
-
-
+}
+- (void)setFMOctaveOffset:(float)octave{
+    float o = (float)octave;
+    [PdBase sendFloat:o toReceiver:@"FMOctaveOffset"];
+}
 
 - (instancetype)initWithFile:(NSString *)pdFile{
     void *patch;

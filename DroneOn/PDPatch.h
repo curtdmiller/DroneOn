@@ -34,5 +34,11 @@
 - (void)fmToggle:(BOOL)yesNo;
 - (void)setFMVolume:(float)volume;
 - (void)setFMIndex:(float)brightness;
+- (void)setFMPitch:(int)pitch;
+- (void)setFMTuning:(float)tuning;
+- (void)setFMOctaveOffset:(float)octave;
+
+
+
 
 @end

@@ -28,12 +28,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.patch = [[PDPatch alloc] initWithFile:@"DroneOn.pd"];
+    self.patch = [[PDPatch alloc] initWithFile:@"DroneOnFM.pd"];
     self.pitchNames = [[PitchNames alloc] init];
     
     self.fmNotePicker.dataSource = self;
     self.fmNotePicker.delegate = self;
     
+    [self.fmNotePicker selectRow:2 inComponent:1 animated:NO];
+    [self.fmNotePicker selectRow:0 inComponent:0 animated:NO];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,11 +65,11 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) { // if selection made from letter names column
         int currentPitch = [self.pitchNames pitchNameToMidi:[self.pitchNames.pitches[component] objectAtIndex:row]];
-        [self.patch setPitch:currentPitch];
+        [self.patch setFMPitch:currentPitch];
         NSLog(@"current pitch: %d", currentPitch);
     } else { // if selection made from octave column
         int currentOctave = [self.pitchNames octaveNameToInt:[self.pitchNames.pitches[component] objectAtIndex:row]];
-        [self.patch setOctaveOffset:currentOctave];
+        [self.patch setFMOctaveOffset:currentOctave];
         NSLog(@"current octave %d", currentOctave);
     }
 }
@@ -77,13 +80,13 @@
     [self.patch setFMIndex:self.brightnessSlider.value];
 }
 - (IBAction)fmTuningStepperChange:(id)sender {
-    [self.patch setTuning:self.fmTuningSlider.value];
+    [self.patch setFMTuning:self.fmTuningSlider.value];
     NSString *currentTuning = [NSString stringWithFormat:@"A = %.1f Hz", self.fmTuningStepper.value];
     self.fmTuningLabel.text = currentTuning;
     self.fmTuningSlider.value = self.fmTuningStepper.value;
 }
 - (IBAction)fmTuningSliderChange:(id)sender {
-    [self.patch setTuning:self.fmTuningSlider.value];
+    [self.patch setFMTuning:self.fmTuningSlider.value];
     NSString *currentTuning = [NSString stringWithFormat:@"A = %.1f Hz", self.fmTuningSlider.value];
     self.fmTuningLabel.text = currentTuning;
     self.fmTuningStepper.value = self.fmTuningSlider.value;
