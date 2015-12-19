@@ -21,6 +21,7 @@
 		F08A9E471C18D5F4000890B6 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A9E451C18D5F4000890B6 /* PDPatch.m */; };
 		F08B1E611C1E53800043E182 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08B1E601C1E53800043E182 /* FMViewController.m */; };
 		F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F1D1D1C19FC00001D36D3 /* PitchNames.m */; };
+		F0C36F341C20DACD000651FB /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C36F331C20DACD000651FB /* RecordViewController.m */; };
 		F0CA05781C2081C10072BECA /* DroneOnSine.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA05771C2081C10072BECA /* DroneOnSine.pd */; };
 		F0CA057B1C2087040072BECA /* DroneOnNoise.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA057A1C2087040072BECA /* DroneOnNoise.pd */; };
 		F0CA057D1C2088490072BECA /* DroneOnFM.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA057C1C2088490072BECA /* DroneOnFM.pd */; };
@@ -75,6 +76,8 @@
 		F08B1E601C1E53800043E182 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		F09F1D1C1C19FC00001D36D3 /* PitchNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchNames.h; sourceTree = "<group>"; };
 		F09F1D1D1C19FC00001D36D3 /* PitchNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchNames.m; sourceTree = "<group>"; };
+		F0C36F321C20DACD000651FB /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		F0C36F331C20DACD000651FB /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		F0CA05771C2081C10072BECA /* DroneOnSine.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnSine.pd; sourceTree = "<group>"; };
 		F0CA057A1C2087040072BECA /* DroneOnNoise.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnNoise.pd; sourceTree = "<group>"; };
 		F0CA057C1C2088490072BECA /* DroneOnFM.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DroneOnFM.pd; sourceTree = "<group>"; };
@@ -119,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				F08B1E6B1C1F48140043E182 /* Models */,
-				F08A9E091C18D12A000890B6 /* Supporting Files */,
 				F0B7DF0B1C1A549900E892D7 /* ViewControllers */,
 				F08A9E0C1C18D12A000890B6 /* AppDelegate.h */,
 				F08A9E0D1C18D12A000890B6 /* AppDelegate.m */,
@@ -127,6 +129,7 @@
 				F08A9E1D1C18D12A000890B6 /* Info.plist */,
 				F08A9E1A1C18D12A000890B6 /* LaunchScreen.storyboard */,
 				F08A9E151C18D12A000890B6 /* Main.storyboard */,
+				F08A9E091C18D12A000890B6 /* Supporting Files */,
 			);
 			path = DroneOn;
 			sourceTree = "<group>";
@@ -173,6 +176,8 @@
 				F08A9E131C18D12A000890B6 /* NoiseViewController.m */,
 				F08A9E0F1C18D12A000890B6 /* SineToneViewController.h */,
 				F08A9E101C18D12A000890B6 /* SineToneViewController.m */,
+				F0C36F321C20DACD000651FB /* RecordViewController.h */,
+				F0C36F331C20DACD000651FB /* RecordViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */,
 				F08A9E111C18D12A000890B6 /* SineToneViewController.m in Sources */,
 				F08A9E0B1C18D12A000890B6 /* main.m in Sources */,
+				F0C36F341C20DACD000651FB /* RecordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

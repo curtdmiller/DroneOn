@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -9,7 +9,7 @@
         <!--Sine-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="SineToneViewController" sceneMemberID="viewController">
+                <viewController title="Sine" id="9pv-A4-QxB" customClass="SineToneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-327"/>
+            <point key="canvasLocation" x="782" y="-350"/>
         </scene>
         <!--Noise-->
         <scene sceneID="wg7-f3-ORb">
@@ -226,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1436" y="-350"/>
         </scene>
         <!--FM-->
         <scene sceneID="tfg-wT-58h">
@@ -350,7 +350,7 @@
                             <constraint firstItem="4zA-zZ-9fx" firstAttribute="top" secondItem="Bht-ar-uab" secondAttribute="top" id="rmt-Hb-cNA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jNj-5d-6sO"/>
+                    <tabBarItem key="tabBarItem" title="Tone" id="jNj-5d-6sO"/>
                     <connections>
                         <outlet property="brightnessSlider" destination="xfK-dE-pXf" id="SEC-zm-Ts8"/>
                         <outlet property="fmNotePicker" destination="p6Q-0Q-AIB" id="8t1-NB-hi8"/>
@@ -363,7 +363,119 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQs-wQ-AYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="788"/>
+            <point key="canvasLocation" x="782" y="338"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="KL1-UA-QnG">
+            <objects>
+                <viewController title="Record" id="Rf1-xo-mQT" customClass="RecordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sIf-vM-8GY"/>
+                        <viewControllerLayoutGuide type="bottom" id="g3B-bY-VmR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yc0-OV-GWX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-S2-Okw">
+                                <rect key="frame" x="250" y="20" width="101" height="28"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VpN-5u-hHa">
+                                <rect key="frame" x="276" y="512" width="51" height="31"/>
+                                <animations/>
+                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="fmToggleChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="hSY-ue-9cE"/>
+                                    <action selector="noiseSwitchStateChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="qGA-h5-mSK"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="E45-sI-Std">
+                                <rect key="frame" x="200" y="474" width="200" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="eQf-lK-X8M"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="fmVolumeSliderChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="f79-Jv-4ZK"/>
+                                    <action selector="lowPassChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="u1O-Gg-uki"/>
+                                    <action selector="noiseVolumeSliderChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="5kv-iY-oJm"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-6O-4uM">
+                                <rect key="frame" x="276" y="448" width="48" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ELd-bp-7cn">
+                                <rect key="frame" x="200" y="299" width="200" height="2"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="L4Q-It-VFf"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-EX-Ly6">
+                                <rect key="frame" x="276" y="109" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="Irh-wY-vbw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-Lm-PZh">
+                                <rect key="frame" x="283" y="147" width="35" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Loop"/>
+                                <connections>
+                                    <action selector="loopTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="Mrm-hX-26i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVP-0G-NG9">
+                                <rect key="frame" x="284" y="185" width="32" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="rP2-VP-MpD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VpN-5u-hHa" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="92R-om-dv5"/>
+                            <constraint firstItem="ELd-bp-7cn" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="9Aj-PV-9BD"/>
+                            <constraint firstItem="BxZ-6O-4uM" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="BDg-Bb-BJd"/>
+                            <constraint firstItem="ELd-bp-7cn" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" id="CBr-uq-Sip"/>
+                            <constraint firstItem="sVP-0G-NG9" firstAttribute="top" secondItem="Kpd-Lm-PZh" secondAttribute="bottom" constant="8" id="EJt-EX-LJw"/>
+                            <constraint firstItem="uZk-EX-Ly6" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="MBi-0Q-Llf"/>
+                            <constraint firstItem="sVP-0G-NG9" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="Qv1-EL-8mT"/>
+                            <constraint firstItem="E45-sI-Std" firstAttribute="top" secondItem="BxZ-6O-4uM" secondAttribute="bottom" constant="8" id="R3y-ut-8jL"/>
+                            <constraint firstItem="Kpd-Lm-PZh" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="ULe-Gv-o8a"/>
+                            <constraint firstItem="xyQ-S2-Okw" firstAttribute="top" secondItem="sIf-vM-8GY" secondAttribute="bottom" id="cAh-03-YJT"/>
+                            <constraint firstItem="ELd-bp-7cn" firstAttribute="top" secondItem="sVP-0G-NG9" secondAttribute="bottom" constant="84" id="ckc-LY-3w3"/>
+                            <constraint firstItem="Kpd-Lm-PZh" firstAttribute="top" secondItem="uZk-EX-Ly6" secondAttribute="bottom" constant="8" id="msV-h2-Q0i"/>
+                            <constraint firstItem="xyQ-S2-Okw" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="qiM-fz-vba"/>
+                            <constraint firstItem="g3B-bY-VmR" firstAttribute="top" secondItem="VpN-5u-hHa" secondAttribute="bottom" constant="8" id="sev-lf-JFH"/>
+                            <constraint firstItem="VpN-5u-hHa" firstAttribute="top" secondItem="E45-sI-Std" secondAttribute="bottom" constant="8" id="u36-KO-cG9"/>
+                            <constraint firstItem="E45-sI-Std" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="y1a-u9-qkb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" id="8bC-s6-yFT"/>
+                    <connections>
+                        <outlet property="loopButton" destination="Kpd-Lm-PZh" id="SkO-ul-fUg"/>
+                        <outlet property="recordButton" destination="uZk-EX-Ly6" id="BjE-ZD-eZb"/>
+                        <outlet property="recordProgress" destination="ELd-bp-7cn" id="rTk-p5-6WF"/>
+                        <outlet property="stopButton" destination="sVP-0G-NG9" id="in6-aq-uzp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgN-Tb-jQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="338"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -380,6 +492,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="2FN-lL-j1F" kind="relationship" relationship="viewControllers" id="En1-ZE-E9i"/>
+                        <segue destination="Rf1-xo-mQT" kind="relationship" relationship="viewControllers" id="Vub-9W-VTe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
