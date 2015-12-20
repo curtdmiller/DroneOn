@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loopButton;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIProgressView *recordProgress;
+@property (weak, nonatomic) IBOutlet UISlider *recordTuning;
 
 @end
 
@@ -34,6 +35,8 @@
 - (IBAction)loopTouched:(id)sender {
 }
 - (IBAction)stopTouched:(id)sender {
+}
+- (IBAction)recTuningChange:(id)sender {
 }
 
 @end

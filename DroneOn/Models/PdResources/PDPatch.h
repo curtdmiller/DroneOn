@@ -17,20 +17,20 @@
 - (void)setTuning:(float)tuning;
 - (void)setOctaveOffset:(float)octave;
 
-// sine specific methods
+// sine methods
 - (void)setSinePitch:(int)pitch;
 - (void)setSineOctaveOffset:(float)octave;
 - (void)setSineTuning:(float)tuning;
 - (void)sineToggle:(BOOL)yesNo;
 - (void)sineVolume:(float)volume;
 
-// noise specific methods
+// noise methods
 - (void)noiseToggle:(BOOL)yesNo;
 - (void)setNoiseVolume:(float)volume;
 - (void)setNoiseHighPass:(float)freq;
 - (void)setNoiseLowPass:(float)freq;
 
-// fm specific methods
+// fm methods
 - (void)fmToggle:(BOOL)yesNo;
 - (void)setFMVolume:(float)volume;
 - (void)setFMIndex:(float)brightness;
@@ -38,7 +38,11 @@
 - (void)setFMTuning:(float)tuning;
 - (void)setFMOctaveOffset:(float)octave;
 
-
+// record methods
+- (void)record:(BOOL)startBang;
+- (void)loopPlayback:(BOOL)start;
+- (void)stopPlayback:(BOOL)stopBang;
+- (void)adjustPitch:(float)midiPitch;
 
 
 @end

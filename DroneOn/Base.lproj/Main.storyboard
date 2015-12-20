@@ -443,6 +443,26 @@
                                     <action selector="stopTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="rP2-VP-MpD"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-74-nkf">
+                                <rect key="frame" x="200" y="369" width="200" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="JPi-vo-IhG"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="fmVolumeSliderChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="BkV-cO-I9y"/>
+                                    <action selector="lowPassChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Zdg-R2-u5L"/>
+                                    <action selector="noiseVolumeSliderChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Fs3-RI-LwJ"/>
+                                    <action selector="recTuningChange:" destination="Rf1-xo-mQT" eventType="valueChanged" id="g1u-b2-REc"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-ep-e73">
+                                <rect key="frame" x="279" y="343" width="43" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -451,7 +471,10 @@
                             <constraint firstItem="ELd-bp-7cn" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="9Aj-PV-9BD"/>
                             <constraint firstItem="BxZ-6O-4uM" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="BDg-Bb-BJd"/>
                             <constraint firstItem="ELd-bp-7cn" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" id="CBr-uq-Sip"/>
+                            <constraint firstItem="NeA-ep-e73" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="CVy-In-IaZ"/>
                             <constraint firstItem="sVP-0G-NG9" firstAttribute="top" secondItem="Kpd-Lm-PZh" secondAttribute="bottom" constant="8" id="EJt-EX-LJw"/>
+                            <constraint firstItem="g3B-bY-VmR" firstAttribute="top" secondItem="bG8-74-nkf" secondAttribute="bottom" constant="152" id="G2F-Av-kyc"/>
+                            <constraint firstItem="bG8-74-nkf" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="Hpb-l4-aSD"/>
                             <constraint firstItem="uZk-EX-Ly6" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="MBi-0Q-Llf"/>
                             <constraint firstItem="sVP-0G-NG9" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="Qv1-EL-8mT"/>
                             <constraint firstItem="E45-sI-Std" firstAttribute="top" secondItem="BxZ-6O-4uM" secondAttribute="bottom" constant="8" id="R3y-ut-8jL"/>
@@ -459,6 +482,7 @@
                             <constraint firstItem="xyQ-S2-Okw" firstAttribute="top" secondItem="sIf-vM-8GY" secondAttribute="bottom" id="cAh-03-YJT"/>
                             <constraint firstItem="ELd-bp-7cn" firstAttribute="top" secondItem="sVP-0G-NG9" secondAttribute="bottom" constant="84" id="ckc-LY-3w3"/>
                             <constraint firstItem="Kpd-Lm-PZh" firstAttribute="top" secondItem="uZk-EX-Ly6" secondAttribute="bottom" constant="8" id="msV-h2-Q0i"/>
+                            <constraint firstItem="bG8-74-nkf" firstAttribute="top" secondItem="NeA-ep-e73" secondAttribute="bottom" constant="8" id="oBu-CM-hqo"/>
                             <constraint firstItem="xyQ-S2-Okw" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="qiM-fz-vba"/>
                             <constraint firstItem="g3B-bY-VmR" firstAttribute="top" secondItem="VpN-5u-hHa" secondAttribute="bottom" constant="8" id="sev-lf-JFH"/>
                             <constraint firstItem="VpN-5u-hHa" firstAttribute="top" secondItem="E45-sI-Std" secondAttribute="bottom" constant="8" id="u36-KO-cG9"/>
@@ -470,6 +494,7 @@
                         <outlet property="loopButton" destination="Kpd-Lm-PZh" id="SkO-ul-fUg"/>
                         <outlet property="recordButton" destination="uZk-EX-Ly6" id="BjE-ZD-eZb"/>
                         <outlet property="recordProgress" destination="ELd-bp-7cn" id="rTk-p5-6WF"/>
+                        <outlet property="recordTuning" destination="bG8-74-nkf" id="AYw-YI-H0y"/>
                         <outlet property="stopButton" destination="sVP-0G-NG9" id="in6-aq-uzp"/>
                     </connections>
                 </viewController>

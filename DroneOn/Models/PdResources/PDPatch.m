@@ -92,6 +92,25 @@
     [PdBase sendFloat:o toReceiver:@"FMOctaveOffset"];
 }
 
+
+#pragma mark - record methods
+- (void)record:(BOOL)startBang{
+    float r = (BOOL)startBang;
+    [PdBase sendBangToReceiver:@"recStart"];
+}
+- (void)loopPlayback:(BOOL)start{
+    float l = (BOOL)start;
+    [PdBase sendFloat:l toReceiver:@"recToggle"];
+}
+- (void)stopPlayback:(BOOL)stopBang{
+    float s = (BOOL)stopBang;
+    [PdBase sendBangToReceiver:@"recStop"];
+}
+- (void)adjustPitch:(float)midiPitch{
+    float p = (float)midiPitch;
+    [PdBase sendFloat:p toReceiver:@"playbackPitch"];
+}
+
 - (instancetype)initWithFile:(NSString *)pdFile{
     void *patch;
     self = [super init];
