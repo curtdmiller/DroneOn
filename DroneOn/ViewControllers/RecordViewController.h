@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDPatch.h"
 
 @interface RecordViewController : UIViewController
+
+@property (strong, nonatomic) PDPatch *patch;
+@property (strong, nonatomic) PDPatch *olaPatch;
 
 @end

@@ -10,9 +10,8 @@
 
 @interface RecordViewController ()
 
+@property (weak, nonatomic) IBOutlet UISwitch *recToggleSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
-@property (weak, nonatomic) IBOutlet UIButton *loopButton;
-@property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIProgressView *recordProgress;
 @property (weak, nonatomic) IBOutlet UISlider *recordTuning;
 
@@ -22,21 +21,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.patch = [[PDPatch alloc]initWithFile:@"DroneOnRecord.pd"];
+    self.olaPatch = [[PDPatch alloc]initWithFile:@"ola.pd"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)recordTouched:(id)sender {
+    [self.patch recordStartStop:1];
 }
-- (IBAction)loopTouched:(id)sender {
-}
-- (IBAction)stopTouched:(id)sender {
+- (IBAction)recToggleSwitchTouched:(id)sender {
+    if (self.recToggleSwitch.isOn) {
+        [self.patch recordPlayToggle:1];
+    }
+    else {
+        [self.patch recordPlayToggle:0];
+    }
 }
 - (IBAction)recTuningChange:(id)sender {
+    [self.patch adjustPitch:self.recordTuning.value];
 }
 
 @end

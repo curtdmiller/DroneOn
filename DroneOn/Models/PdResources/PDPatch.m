@@ -94,21 +94,22 @@
 
 
 #pragma mark - record methods
-- (void)record:(BOOL)startBang{
-    float r = (BOOL)startBang;
-    [PdBase sendBangToReceiver:@"recStart"];
+
+- (void)recordPlayToggle:(float)onOff{
+    float t = (float)onOff;
+    [PdBase sendFloat:t toReceiver:@"recordPlayToggle"];
 }
-- (void)loopPlayback:(BOOL)start{
-    float l = (BOOL)start;
-    [PdBase sendFloat:l toReceiver:@"recToggle"];
-}
-- (void)stopPlayback:(BOOL)stopBang{
-    float s = (BOOL)stopBang;
-    [PdBase sendBangToReceiver:@"recStop"];
+- (void)recordStartStop:(float)startStop{
+    float s = (float)startStop;
+    [PdBase sendFloat:s toReceiver:@"recStartStop"];
 }
 - (void)adjustPitch:(float)midiPitch{
     float p = (float)midiPitch;
     [PdBase sendFloat:p toReceiver:@"playbackPitch"];
+}
+- (void)recVolume:(float)volume{
+    float v = (float)volume;
+    [PdBase sendFloat:v toReceiver:@"recVol"];
 }
 
 - (instancetype)initWithFile:(NSString *)pdFile{

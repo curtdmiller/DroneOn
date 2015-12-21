@@ -1,18 +1,18 @@
-#N canvas 726 262 913 564 10;
+#N canvas 176 151 913 564 10;
 #X obj 53 483 outlet~;
 #X obj 644 38 inlet;
 #X text 642 22 change_speed/pitch 0=no_change;
 #X obj 56 67 tgl 15 0 \$0-on_off empty ON/OFF 17 7 0 10 -262144 -1
--1 1 1;
+-1 0 1;
 #X obj 464 41 bng 15 250 50 0 \$0-norm empty NORM 17 7 0 10 -262144
 -1 -1;
 #X obj 53 135 hsl 400 15 0 1 0 0 \$0-start_slider \$0-start_sliderIN
 Start 5 8 0 10 -262144 -1 -1 0 1;
 #X obj 53 168 hsl 400 15 0 1 0 0 \$0-loop_slider \$0-loop_sliderIN
-Loop_Length 5 8 0 10 -262144 -1 -1 0 1;
+Loop_Length 5 8 0 10 -262144 -1 -1 39900 1;
 #X obj 56 39 inlet;
 #X obj 53 155 hsl 400 8 0 1 0 0 empty \$0-end_slider empty 5 8 0 10
--162280 -1 -1 0 1;
+-162280 -1 -1 39900 1;
 #N canvas 681 227 381 480 ola 0;
 #X obj 27 168 bng 15 250 50 0 empty empty play 17 7 0 10 -262144 -1
 -1;
@@ -267,7 +267,7 @@ Loop_Length 5 8 0 10 -262144 -1 -1 0 1;
 #X obj 144 41 s \$0-start_sliderIN;
 #X obj 331 41 s \$0-loop_slider;
 #X msg 612 40 0;
-#N canvas 1084 454 829 490 table 0;
+#N canvas 428 266 829 490 table 0;
 #X obj 87 112 loadbang;
 #X obj 87 135 f \$0;
 #X floatatom 87 158 5 0 0 0 - - -, f 5;
@@ -290,8 +290,8 @@ Loop_Length 5 8 0 10 -262144 -1 -1 0 1;
 #X floatatom 404 323 15 0 0 0 - #0-samplesize -, f 15;
 #X obj 245 313 * 44.1;
 #X obj 245 226 table \$0-array 441000;
-#X obj 329 22 inlet;
-#X obj 368 22 inlet;
+#X obj 299 20 inlet;
+#X obj 362 20 inlet;
 #X obj 153 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X connect 0 0 1 0;

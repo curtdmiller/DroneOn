@@ -18,8 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.pd = [[PdAudioController alloc] init];
-    PdAudioStatus pdInit = [self.pd configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
-    // PdAudioStatus pdInit = [self.pd configurePlaybackWithSampleRate:44100 numberChannels:2 inputEnabled:YES mixingEnabled:YES];
+    // PdAudioStatus pdInit = [self.pd configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
+    PdAudioStatus pdInit = [self.pd configurePlaybackWithSampleRate:44100 numberChannels:2 inputEnabled:YES mixingEnabled:YES];
     if(pdInit !=PdAudioOK) {
         NSLog(@"Pd failed to initialize");
     }

@@ -39,10 +39,10 @@
 - (void)setFMOctaveOffset:(float)octave;
 
 // record methods
-- (void)record:(BOOL)startBang;
-- (void)loopPlayback:(BOOL)start;
-- (void)stopPlayback:(BOOL)stopBang;
+- (void)recordPlayToggle:(float)onOff;
+- (void)recordStartStop:(float)startStop;
 - (void)adjustPitch:(float)midiPitch;
+- (void)recVolume:(float)volume;
 
 
 @end
