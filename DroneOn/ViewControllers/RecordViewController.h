@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "PDPatch.h"
+#import "PdDispatcher.h"
 
-@interface RecordViewController : UIViewController
+@interface RecordViewController : UIViewController <PdListener>
+{
+    PdDispatcher *dispatcher;
+}
 
 @property (strong, nonatomic) PDPatch *patch;
-@property (strong, nonatomic) PDPatch *olaPatch;
+
+- (void)receiveFloat:(float)received fromSource:(NSString *)source;
 
 @end

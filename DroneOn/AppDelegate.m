@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PdDispatcher.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,7 @@
     if(pdInit !=PdAudioOK) {
         NSLog(@"Pd failed to initialize");
     }
+    
     return YES;
 }
 

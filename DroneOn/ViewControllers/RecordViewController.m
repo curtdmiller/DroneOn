@@ -19,19 +19,32 @@
 
 @implementation RecordViewController
 
+float rectime;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
     self.patch = [[PDPatch alloc]initWithFile:@"DroneOnRecord.pd"];
-    self.olaPatch = [[PDPatch alloc]initWithFile:@"ola.pd"];
+
+    dispatcher = [[PdDispatcher alloc] init];
+    [dispatcher addListener:self forSource:@"recTime"];
+    [PdBase setDelegate:dispatcher];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (void)receiveFloat:(float)received fromSource:(NSString *)source{
+    if ([source isEqualToString:@"recTime"] == 1) {
+        [self.recordProgress setProgress:received animated:NO];
+    }
+}
+
 - (IBAction)recordTouched:(id)sender {
     [self.patch recordStartStop:1];
+    [self.recordProgress setProgress:0 animated:NO];
 }
 - (IBAction)recToggleSwitchTouched:(id)sender {
     if (self.recToggleSwitch.isOn) {
