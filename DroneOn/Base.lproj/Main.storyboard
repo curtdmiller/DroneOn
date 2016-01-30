@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,6 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6gj-aY-TlC">
                                 <rect key="frame" x="276" y="512" width="51" height="31"/>
-                                <animations/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sineToggleSwitch:" destination="9pv-A4-QxB" eventType="valueChanged" id="LbX-SF-tyZ"/>
@@ -28,7 +27,6 @@
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minValue="420" maxValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-99-Scb">
                                 <rect key="frame" x="200" y="137" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="mkw-SG-ZmO"/>
                                 </constraints>
@@ -38,7 +36,6 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="06n-b6-Y60">
                                 <rect key="frame" x="200" y="474" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="QLu-V3-IUO"/>
                                 </constraints>
@@ -48,38 +45,32 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQA-r8-vnd">
                                 <rect key="frame" x="276" y="448" width="48" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="420" maximumValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="pkG-hG-GzV">
                                 <rect key="frame" x="253" y="100" width="94" height="29"/>
-                                <animations/>
                                 <connections>
                                     <action selector="sineTuningStepperInput:" destination="9pv-A4-QxB" eventType="valueChanged" id="Yao-UR-pVt"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A = 440.0 Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-ky-u7g">
                                 <rect key="frame" x="257" y="74" width="86" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzO-Tm-Jxv">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
-                                <animations/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-ce-MZv">
                                 <rect key="frame" x="273" y="20" width="54" height="28"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="06n-b6-Y60" firstAttribute="top" secondItem="qQA-r8-vnd" secondAttribute="bottom" constant="8" id="3E9-rb-q4k"/>
@@ -129,7 +120,6 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Vq-8A-yU9">
                                 <rect key="frame" x="276" y="512" width="51" height="31"/>
-                                <animations/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="noiseSwitchStateChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="YDP-lb-Pj3"/>
@@ -137,14 +127,12 @@
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOISE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNX-VX-WDj">
                                 <rect key="frame" x="264" y="20" width="72" height="28"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GvG-4Q-Frm">
                                 <rect key="frame" x="200" y="474" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="LMu-Zj-VV5"/>
                                 </constraints>
@@ -155,14 +143,12 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtw-Hp-gw5">
                                 <rect key="frame" x="276" y="448" width="48" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="8" maxValue="136" translatesAutoresizingMaskIntoConstraints="NO" id="Bmp-04-kWN">
                                 <rect key="frame" x="200" y="257" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="uf8-3P-LD1"/>
                                 </constraints>
@@ -172,7 +158,6 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="136" minValue="5" maxValue="136" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-ca-ca2">
                                 <rect key="frame" x="200" y="338" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="MKA-XR-Jrb"/>
                                 </constraints>
@@ -182,20 +167,17 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High-Pass Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exw-nR-xkY">
                                 <rect key="frame" x="249" y="231" width="102" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low-Pass Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v7-Rr-gFw">
                                 <rect key="frame" x="250" y="312" width="100" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Bmp-04-kWN" secondAttribute="bottom" constant="264" id="3bq-aV-9HH"/>
@@ -242,18 +224,15 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaC-cy-o6o">
                                 <rect key="frame" x="268" y="20" width="64" height="28"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-0Q-AIB">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
-                                <animations/>
                             </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8tc-qK-MzO">
                                 <rect key="frame" x="276" y="512" width="51" height="31"/>
-                                <animations/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="fmToggleChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="iSJ-K9-6dJ"/>
@@ -262,7 +241,6 @@
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-II-bO2">
                                 <rect key="frame" x="200" y="474" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="Gos-97-GSB"/>
                                 </constraints>
@@ -274,14 +252,12 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7r-Ui-ukc">
                                 <rect key="frame" x="276" y="448" width="48" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xfK-dE-pXf">
                                 <rect key="frame" x="18" y="134" width="100" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="ngz-BI-mGf"/>
                                 </constraints>
@@ -292,14 +268,12 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-zZ-9fx">
                                 <rect key="frame" x="34" y="71" width="69" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minValue="420" maxValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="oSs-rm-dmq">
                                 <rect key="frame" x="482" y="134" width="100" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="oGa-ZW-pwL"/>
                                 </constraints>
@@ -310,7 +284,6 @@
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="420" maximumValue="460" translatesAutoresizingMaskIntoConstraints="NO" id="Or7-KM-XjX">
                                 <rect key="frame" x="485" y="97" width="94" height="29"/>
-                                <animations/>
                                 <connections>
                                     <action selector="fmTuningStepperChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="adQ-eP-SWM"/>
                                     <action selector="sineTuningStepperInput:" destination="9pv-A4-QxB" eventType="valueChanged" id="QeJ-ec-TBb"/>
@@ -318,13 +291,11 @@
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A = 440.0 Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bht-ar-uab">
                                 <rect key="frame" x="489" y="71" width="86" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A7r-Ui-ukc" firstAttribute="centerX" secondItem="YJY-hv-Fpy" secondAttribute="centerX" id="36T-b1-xVq"/>
@@ -379,14 +350,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-S2-Okw">
                                 <rect key="frame" x="250" y="20" width="101" height="28"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VpN-5u-hHa">
                                 <rect key="frame" x="276" y="512" width="51" height="31"/>
-                                <animations/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="fmToggleChange:" destination="2FN-lL-j1F" eventType="valueChanged" id="hSY-ue-9cE"/>
@@ -396,7 +365,6 @@
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="E45-sI-Std">
                                 <rect key="frame" x="200" y="474" width="200" height="31"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="eQf-lK-X8M"/>
                                 </constraints>
@@ -408,21 +376,41 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-6O-4uM">
                                 <rect key="frame" x="276" y="448" width="48" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ELd-bp-7cn">
-                                <rect key="frame" x="200" y="299" width="200" height="2"/>
-                                <animations/>
+                                <rect key="frame" x="200" y="235" width="200" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="L4Q-It-VFf"/>
                                 </constraints>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-ep-e73">
+                                <rect key="frame" x="279" y="291" width="43" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-EX-Ly6">
+                                <rect key="frame" x="276" y="146" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="Irh-wY-vbw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNa-OQ-GOE">
+                                <rect key="frame" x="285" y="184" width="30" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="VGO-7b-Y5w"/>
+                                    <action selector="recordTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="Jza-Uq-N1P"/>
+                                </connections>
+                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-74-nkf">
-                                <rect key="frame" x="200" y="369" width="200" height="31"/>
-                                <animations/>
+                                <rect key="frame" x="200" y="317" width="200" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="JPi-vo-IhG"/>
                                 </constraints>
@@ -433,47 +421,40 @@
                                     <action selector="recTuningChange:" destination="Rf1-xo-mQT" eventType="valueChanged" id="g1u-b2-REc"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-ep-e73">
-                                <rect key="frame" x="279" y="343" width="43" height="18"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-EX-Ly6">
-                                <rect key="frame" x="276" y="261" width="49" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="Irh-wY-vbw"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ELd-bp-7cn" firstAttribute="top" secondItem="uZk-EX-Ly6" secondAttribute="bottom" constant="8" id="4bl-Hp-afI"/>
                             <constraint firstItem="VpN-5u-hHa" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="92R-om-dv5"/>
                             <constraint firstItem="ELd-bp-7cn" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="9Aj-PV-9BD"/>
+                            <constraint firstItem="ELd-bp-7cn" firstAttribute="top" secondItem="sNa-OQ-GOE" secondAttribute="bottom" constant="21" id="App-YL-XuV"/>
                             <constraint firstItem="BxZ-6O-4uM" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="BDg-Bb-BJd"/>
-                            <constraint firstItem="ELd-bp-7cn" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" id="CBr-uq-Sip"/>
+                            <constraint firstItem="ELd-bp-7cn" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" constant="-64" id="CBr-uq-Sip"/>
                             <constraint firstItem="NeA-ep-e73" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="CVy-In-IaZ"/>
-                            <constraint firstItem="g3B-bY-VmR" firstAttribute="top" secondItem="bG8-74-nkf" secondAttribute="bottom" constant="152" id="G2F-Av-kyc"/>
                             <constraint firstItem="bG8-74-nkf" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="Hpb-l4-aSD"/>
                             <constraint firstItem="uZk-EX-Ly6" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="MBi-0Q-Llf"/>
                             <constraint firstItem="E45-sI-Std" firstAttribute="top" secondItem="BxZ-6O-4uM" secondAttribute="bottom" constant="8" id="R3y-ut-8jL"/>
+                            <constraint firstItem="sNa-OQ-GOE" firstAttribute="top" secondItem="uZk-EX-Ly6" secondAttribute="bottom" constant="8" id="ZYb-nk-A6j"/>
                             <constraint firstItem="xyQ-S2-Okw" firstAttribute="top" secondItem="sIf-vM-8GY" secondAttribute="bottom" id="cAh-03-YJT"/>
+                            <constraint firstItem="sNa-OQ-GOE" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="hWD-pK-6fX"/>
                             <constraint firstItem="bG8-74-nkf" firstAttribute="top" secondItem="NeA-ep-e73" secondAttribute="bottom" constant="8" id="oBu-CM-hqo"/>
                             <constraint firstItem="xyQ-S2-Okw" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="qiM-fz-vba"/>
                             <constraint firstItem="g3B-bY-VmR" firstAttribute="top" secondItem="VpN-5u-hHa" secondAttribute="bottom" constant="8" id="sev-lf-JFH"/>
+                            <constraint firstItem="NeA-ep-e73" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" id="tj0-PA-tVh"/>
                             <constraint firstItem="VpN-5u-hHa" firstAttribute="top" secondItem="E45-sI-Std" secondAttribute="bottom" constant="8" id="u36-KO-cG9"/>
+                            <constraint firstItem="g3B-bY-VmR" firstAttribute="top" secondItem="ELd-bp-7cn" secondAttribute="bottom" constant="314" id="xG8-ga-hqL"/>
                             <constraint firstItem="E45-sI-Std" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="y1a-u9-qkb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xG8-ga-hqL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" id="8bC-s6-yFT"/>
                     <connections>
                         <outlet property="recToggleSwitch" destination="VpN-5u-hHa" id="rah-2r-gzD"/>
                         <outlet property="recordButton" destination="uZk-EX-Ly6" id="BjE-ZD-eZb"/>
+                        <outlet property="recordPlayButton" destination="sNa-OQ-GOE" id="zGk-KV-Pd9"/>
                         <outlet property="recordProgress" destination="ELd-bp-7cn" id="rTk-p5-6WF"/>
                         <outlet property="recordTuning" destination="bG8-74-nkf" id="AYw-YI-H0y"/>
                     </connections>
@@ -490,7 +471,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
