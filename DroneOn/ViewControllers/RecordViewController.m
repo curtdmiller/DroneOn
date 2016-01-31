@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *recordProgress;
 @property (weak, nonatomic) IBOutlet UISlider *recordTuning;
 @property (weak, nonatomic) IBOutlet UIButton *recordPlayButton;
+@property (weak, nonatomic) IBOutlet UISlider *recordVolumeSlider;
 
 @end
 
@@ -25,12 +26,14 @@ float rectime;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     self.patch = [[PDPatch alloc]initWithFile:@"DroneOnRecord.pd"];
 
     dispatcher = [[PdDispatcher alloc] init];
     [dispatcher addListener:self forSource:@"recTime"];
+    [dispatcher addListener:self forSource:@"env"];
+    [dispatcher addListener:self forSource:@"tester"];
     [PdBase setDelegate:dispatcher];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +49,12 @@ float rectime;
             [self.recordPlayButton setTitleColor:[UIColor darkGrayColor] forState:normal];
         }
     }
+    else if ([source isEqualToString:@"env"]){
+        NSLog(@"env: %f", received);
+    }
+    else if ([source isEqualToString:@"tester"] == 1) {
+        NSLog(@"tester: %f", received);
+    }
 }
 
 - (IBAction)recordTouched:(id)sender {
@@ -53,7 +62,8 @@ float rectime;
     [self.recordProgress setProgress:0 animated:NO];
 }
 - (IBAction)playButtonPressed:(id)sender {
-    
+    [self.patch recordPlayToggle:1];
+    NSLog(@"play button pressed");
     
 }
 - (IBAction)recToggleSwitchTouched:(id)sender {
@@ -66,6 +76,9 @@ float rectime;
 }
 - (IBAction)recTuningChange:(id)sender {
     [self.patch adjustPitch:self.recordTuning.value];
+}
+- (IBAction)recVolumeSliderChanged:(id)sender {
+    [self.patch recVolume:self.recordVolumeSlider.value];
 }
 
 @end
