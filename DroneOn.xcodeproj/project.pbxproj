@@ -20,6 +20,7 @@
 		F08A9E431C18D4C9000890B6 /* ola.pd in Resources */ = {isa = PBXBuildFile; fileRef = F08A9E3F1C18D4C9000890B6 /* ola.pd */; };
 		F08A9E471C18D5F4000890B6 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F08A9E451C18D5F4000890B6 /* PDPatch.m */; };
 		F08B1E611C1E53800043E182 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08B1E601C1E53800043E182 /* FMViewController.m */; };
+		F09A84321C5D9E7900276048 /* WaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = F09A84311C5D9E7900276048 /* WaveformView.m */; };
 		F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F09F1D1D1C19FC00001D36D3 /* PitchNames.m */; };
 		F0C36F341C20DACD000651FB /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C36F331C20DACD000651FB /* RecordViewController.m */; };
 		F0CA05781C2081C10072BECA /* DroneOnSine.pd in Resources */ = {isa = PBXBuildFile; fileRef = F0CA05771C2081C10072BECA /* DroneOnSine.pd */; };
@@ -74,6 +75,8 @@
 		F08A9E461C18D5F4000890B6 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPatch.h; sourceTree = "<group>"; };
 		F08B1E5F1C1E53800043E182 /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
 		F08B1E601C1E53800043E182 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		F09A84301C5D9E7900276048 /* WaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveformView.h; sourceTree = "<group>"; };
+		F09A84311C5D9E7900276048 /* WaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveformView.m; sourceTree = "<group>"; };
 		F09F1D1C1C19FC00001D36D3 /* PitchNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchNames.h; sourceTree = "<group>"; };
 		F09F1D1D1C19FC00001D36D3 /* PitchNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchNames.m; sourceTree = "<group>"; };
 		F0C36F321C20DACD000651FB /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				F08A9E101C18D12A000890B6 /* SineToneViewController.m */,
 				F0C36F321C20DACD000651FB /* RecordViewController.h */,
 				F0C36F331C20DACD000651FB /* RecordViewController.m */,
+				F09A84301C5D9E7900276048 /* WaveformView.h */,
+				F09A84311C5D9E7900276048 /* WaveformView.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				F09F1D1E1C19FC00001D36D3 /* PitchNames.m in Sources */,
 				F08A9E111C18D12A000890B6 /* SineToneViewController.m in Sources */,
 				F08A9E0B1C18D12A000890B6 /* main.m in Sources */,
+				F09A84321C5D9E7900276048 /* WaveformView.m in Sources */,
 				F0C36F341C20DACD000651FB /* RecordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

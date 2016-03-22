@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PDPatch.h"
 #import "PdDispatcher.h"
+#import "WaveformView.h"
 
 @interface RecordViewController : UIViewController <PdListener>
 {

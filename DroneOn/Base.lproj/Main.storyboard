@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -381,12 +381,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ELd-bp-7cn">
-                                <rect key="frame" x="200" y="235" width="200" height="2"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="L4Q-It-VFf"/>
-                                </constraints>
-                            </progressView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-74-nkf">
                                 <rect key="frame" x="200" y="317" width="200" height="31"/>
                                 <constraints>
@@ -405,8 +399,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ELd-bp-7cn">
+                                <rect key="frame" x="200" y="182" width="200" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="L4Q-It-VFf"/>
+                                </constraints>
+                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-EX-Ly6">
-                                <rect key="frame" x="275" y="197" width="49" height="30"/>
+                                <rect key="frame" x="274" y="144" width="52" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="recordTouched:" destination="Rf1-xo-mQT" eventType="touchUpInside" id="Irh-wY-vbw"/>
@@ -418,7 +419,7 @@
                             <constraint firstItem="VpN-5u-hHa" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="92R-om-dv5"/>
                             <constraint firstItem="ELd-bp-7cn" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="9Aj-PV-9BD"/>
                             <constraint firstItem="BxZ-6O-4uM" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="BDg-Bb-BJd"/>
-                            <constraint firstItem="ELd-bp-7cn" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" constant="-64" id="CBr-uq-Sip"/>
+                            <constraint firstItem="ELd-bp-7cn" firstAttribute="centerY" secondItem="Yc0-OV-GWX" secondAttribute="centerY" constant="-117" id="CBr-uq-Sip"/>
                             <constraint firstItem="NeA-ep-e73" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="CVy-In-IaZ"/>
                             <constraint firstItem="bG8-74-nkf" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="Hpb-l4-aSD"/>
                             <constraint firstItem="uZk-EX-Ly6" firstAttribute="centerX" secondItem="Yc0-OV-GWX" secondAttribute="centerX" id="MBi-0Q-Llf"/>

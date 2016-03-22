@@ -14,10 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UIProgressView *recordProgress;
 @property (weak, nonatomic) IBOutlet UISlider *recordTuning;
-@property (weak, nonatomic) IBOutlet UIButton *recordPlayButton;
 @property (weak, nonatomic) IBOutlet UISlider *recordVolumeSlider;
 
 @end
+
 
 @implementation RecordViewController
 
@@ -25,15 +25,20 @@ float rectime;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.patch = [[PDPatch alloc]initWithFile:@"DroneOnRecord.pd"];
-
+    
     dispatcher = [[PdDispatcher alloc] init];
     [dispatcher addListener:self forSource:@"recTime"];
     [dispatcher addListener:self forSource:@"env"];
     [dispatcher addListener:self forSource:@"tester"];
     [PdBase setDelegate:dispatcher];
     
+    //    CGRect viewRect = CGRectMake(self.recordProgress.frame.origin.x,self.recordProgress.frame.origin.y, 200, 50);
+    CGRect viewRect = CGRectMake(100, 192, 200, 50);
+    WaveformView *waveform = [[WaveformView alloc] initWithFrame:viewRect];
+    waveform.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:waveform];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,11 +48,6 @@ float rectime;
 - (void)receiveFloat:(float)received fromSource:(NSString *)source{
     if ([source isEqualToString:@"recTime"] == 1) {
         [self.recordProgress setProgress:received animated:NO];
-        if(received >= 1.0){
-            [self.recordPlayButton setTitleColor:[UIColor greenColor] forState:normal];
-        } else {
-            [self.recordPlayButton setTitleColor:[UIColor darkGrayColor] forState:normal];
-        }
     }
     else if ([source isEqualToString:@"env"]){
         NSLog(@"env: %f", received);
@@ -61,11 +61,7 @@ float rectime;
     [self.patch recordStartStop:1];
     [self.recordProgress setProgress:0 animated:NO];
 }
-- (IBAction)playButtonPressed:(id)sender {
-    [self.patch recordPlayToggle:1];
-    NSLog(@"play button pressed");
-    
-}
+
 - (IBAction)recToggleSwitchTouched:(id)sender {
     if (self.recToggleSwitch.isOn) {
         [self.patch recordPlayToggle:1];
