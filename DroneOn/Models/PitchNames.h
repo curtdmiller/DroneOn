@@ -12,6 +12,21 @@
 
 @property (strong, nonatomic) NSArray *pitches;
 
+typedef enum Pitches{
+    Cnatural,
+    Csharp,
+    Dnatural,
+    Eflat,
+    Enatural,
+    Fnatural,
+    Fsharp,
+    Gnatural,
+    Gsharp,
+    Anatural,
+    Bflat,
+    Bnatural
+}Pitches;
+
 -(int)pitchNameToMidi:(NSString *)selectedPitch;
 -(int)octaveNameToInt:(NSString *)selectedOctave;
 

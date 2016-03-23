@@ -11,6 +11,7 @@
 @implementation PitchNames
 
 -(int)pitchNameToMidi:(NSString *)selectedPitch{
+   
     if ([selectedPitch isEqualToString:@"C"]) {
         return 36;
     } else if ([selectedPitch isEqualToString:@"C#/Db"]) {
