@@ -14,25 +14,25 @@
    
     if ([selectedPitch isEqualToString:@"C"]) {
         return 36;
-    } else if ([selectedPitch isEqualToString:@"C#/Db"]) {
+    } else if ([selectedPitch isEqualToString:@"C#"]) {
         return 37;
     } else if ([selectedPitch isEqualToString:@"D"]) {
         return 38;
-    } else if ([selectedPitch isEqualToString:@"D#/Eb"]) {
+    } else if ([selectedPitch isEqualToString:@"Eb"]) {
         return 39;
     } else if ([selectedPitch isEqualToString:@"E"]) {
         return 40;
     } else if ([selectedPitch isEqualToString:@"F"]) {
         return 41;
-    } else if ([selectedPitch isEqualToString:@"F#/Gb"]) {
+    } else if ([selectedPitch isEqualToString:@"F#"]) {
         return 42;
     } else if ([selectedPitch isEqualToString:@"G"]) {
         return 43;
-    } else if ([selectedPitch isEqualToString:@"G#/Ab"]) {
+    } else if ([selectedPitch isEqualToString:@"G#"]) {
         return 44;
     } else if ([selectedPitch isEqualToString:@"A"]) {
         return 45;
-    } else if ([selectedPitch isEqualToString:@"A#/Bb"]) {
+    } else if ([selectedPitch isEqualToString:@"Bb"]) {
         return 46;
     } else if ([selectedPitch isEqualToString:@"B"]) {
         return 47;
@@ -61,8 +61,7 @@
     self = [super init];
     if (self) {
         _pitches = @[
-                     @[@"C", @"C#/Db",@"D", @"D#/Eb", @"E", @"F", @"F#/Gb",
-                       @"G", @"G#/Ab", @"A", @"A#/Bb", @"B"],
+                     @[@"C", @"C#",@"D", @"Eb", @"E", @"F", @"F#", @"G", @"G#", @"A", @"Bb", @"B"],
                      @[@"1",@"2",@"3",@"4",@"5"]
                      ];
     }
