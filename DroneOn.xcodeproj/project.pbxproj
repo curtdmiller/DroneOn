@@ -427,7 +427,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "pd-for-ios/**";
-				WARNING_CFLAGS = "-w";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -443,7 +443,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "pd-for-ios/**";
-				WARNING_CFLAGS = "-w";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
