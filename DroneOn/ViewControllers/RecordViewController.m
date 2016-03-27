@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UIProgressView *recordProgress;
 @property (weak, nonatomic) IBOutlet UISlider *recordTuning;
-@property (weak, nonatomic) IBOutlet UIButton *recordPlayButton;
 @property (weak, nonatomic) IBOutlet UISlider *recordVolumeSlider;
 
 @end
@@ -43,11 +42,11 @@ float rectime;
 - (void)receiveFloat:(float)received fromSource:(NSString *)source{
     if ([source isEqualToString:@"recTime"] == 1) {
         [self.recordProgress setProgress:received animated:NO];
-        if(received >= 1.0){
-            [self.recordPlayButton setTitleColor:[UIColor greenColor] forState:normal];
-        } else {
-            [self.recordPlayButton setTitleColor:[UIColor darkGrayColor] forState:normal];
-        }
+//        if(received >= 1.0){
+//            [self.recordPlayButton setTitleColor:[UIColor greenColor] forState:normal];
+//        } else {
+//            [self.recordPlayButton setTitleColor:[UIColor darkGrayColor] forState:normal];
+//        }
     }
     else if ([source isEqualToString:@"env"]){
         NSLog(@"env: %f", received);
